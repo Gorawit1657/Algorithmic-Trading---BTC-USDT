@@ -1,56 +1,34 @@
 # Algorithmic Trading BTC-USDT
 
-This repository contains algorithmic trading agents designed for different time intervals, ranging from minutes to days. The project aims to implement and backtest various trading strategies using Jupyter Notebooks.
+This project provides a set of algorithmic trading agents designed to operate across various time intervals. The agents are implemented using Python and Jupyter notebooks. The purpose of the project is to develop and test strategies that operate at different time intervals (1 minute, 1 hour, 1 day, etc.) to optimize trading decisions based on market data.
 
-## Project Structure
+## Overview
 
-The main folder contains the following files and directories:
-- **agents folder/**: Contains the Jupyter Notebooks for different agents, each representing a trading strategy applied to different time intervals.
+This repository contains multiple algorithmic trading agents that use various technical indicators and strategies to make trading decisions. The agents are optimized to work with specific time intervals (1 minute, 1 hour, 4 hours, and 1 day). Additionally, there is a combined agent that integrates strategies across all these intervals.
 
-### Agents Description
+## Files in the Agents Folder
 
-All agents are written in Python, using various trading and financial libraries for backtesting, analysis, and decision-making. Below is a list of the agents and the time intervals they operate on:
+- **agent_1d.ipynb**: This agent operates using 1-day (daily) interval data.
+- **agent_1h.ipynb**: This agent works with 1-hour interval data.
+- **agent_1m.ipynb**: This agent is designed for high-frequency trading using 1-minute interval data.
+- **agent_4h.ipynb**: This agent trades based on 4-hour interval data.
+- **agent_All_Intervals_1m,1h,4h,1d.ipynb**: This is a multi-interval agent that integrates data from all intervals (1m, 1h, 4h, 1d) to make more informed trading decisions.
 
-- **agent_1m.ipynb**: This agent operates on 1-minute intervals, suitable for high-frequency trading.
-- **agent_1h.ipynb**: This agent operates on 1-hour intervals, focusing on medium-frequency trading strategies.
-- **agent_4h.ipynb**: This agent uses 4-hour intervals, allowing it to balance between intraday and swing trading.
-- **agent_1d.ipynb**: This agent operates on daily intervals, ideal for longer-term swing trading strategies.
-- **agent_All_Intervals_1m,1h,4h,1d.ipynb**: This comprehensive agent can operate across multiple time intervals (1 minute, 1 hour, 4 hours, 1 day), providing a holistic view of the market and allowing for multi-timeframe analysis.
+## Data Collection and Preprocessing
 
-## Setup Instructions
+Before running the agents, data must be collected from a reliable financial market data source. The data is typically in the form of candlestick charts (OHLCV: Open, High, Low, Close, Volume). Data preprocessing steps such as handling missing values, scaling, and formatting the data to the required interval are essential.
 
-1. Clone the repository to your local machine:
+Ensure that the data is clean and formatted correctly before passing it to the agents. If needed, custom preprocessing functions can be added in the notebooks.
 
-    ```bash
-    git clone <repository-url>
-    ```
+## Agents Description
 
-2. Install the required dependencies:
+Each agent implements a unique trading strategy optimized for different timeframes. The strategies vary in their use of indicators, risk management techniques, and frequency of trades.
 
-    - Jupyter Notebook
-    - Python 3.x
-    - Financial data libraries like `pandas`, `numpy`, and `matplotlib`
+- **1 Minute Agent (agent_1m.ipynb)**: Ideal for high-frequency trading and making fast decisions based on short-term market movements.
+- **1 Hour Agent (agent_1h.ipynb)**: Suitable for intraday trading, taking into account medium-term trends within a trading day.
+- **4 Hour Agent (agent_4h.ipynb)**: A balanced agent for traders who want to capture larger movements without frequent trades.
+- **1 Day Agent (agent_1d.ipynb)**: Designed for long-term traders, focusing on large market shifts over days.
+- **All Intervals Agent**: This agent combines strategies across all intervals to create a more robust decision-making model.
 
-    Install the dependencies using `pip`:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Open any of the Jupyter Notebooks in the `agents folder/` to explore the different strategies:
-
-    ```bash
-    jupyter notebook agents/agent_1d.ipynb
-    ```
-
-## Usage
-
-- **agent_1m.ipynb**: High-frequency trading with 1-minute candles.
-- **agent_1h.ipynb**: Suitable for day traders looking for trades based on hourly trends.
-- **agent_4h.ipynb**: Best for those seeking to capture intraday swings.
-- **agent_1d.ipynb**: For longer-term swing traders using daily data.
-- **agent_All_Intervals_1m,1h,4h,1d.ipynb**: A hybrid approach that combines signals from multiple timeframes.
-
-## Report
-
-Refer to the `report.pdf` for detailed insights into the performance of each agent and a breakdown of the strategies used.
+# Disclaimer
+This project is intended for educational purposes only. It is not financial advice and should not be used for live trading in financial markets. 
