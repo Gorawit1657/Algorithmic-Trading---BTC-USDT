@@ -1,4 +1,4 @@
-# FINENG G13 Algorithmic Trading Agents
+# Algorithmic Trading BTC-USDT
 
 This repository contains algorithmic trading agents designed for different time intervals, ranging from minutes to days. The project aims to implement and backtest various trading strategies using Jupyter Notebooks.
 
