@@ -2,9 +2,9 @@
 
 This project provides a set of algorithmic trading agents designed to operate across various time intervals. The agents are implemented using Python and Jupyter notebooks. The purpose of the project is to develop and test strategies that operate at different time intervals (1 minute, 1 hour, 1 day, etc.) to optimize trading decisions based on market data.
 
-## Overview
+## Objective
 
-This repository contains multiple algorithmic trading agents that use various technical indicators and strategies to make trading decisions. The agents are optimized to work with specific time intervals (1 minute, 1 hour, 4 hours, and 1 day). Additionally, there is a combined agent that integrates strategies across all these intervals.
+Develop, backtest, and evaluate trading strategies for BTC/USDT using different time intervals. Implement strategies using the provided algorithmic trading simulation and agent templates. The intervals to be considered are: - 1 minute - 1 hour - 4 hours - 1 day
 
 ## Files in the Agents Folder
 
